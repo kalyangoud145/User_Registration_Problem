@@ -9,9 +9,18 @@ else
    echo "False"
 fi
 #lastname
-read -p "Enter lastName: " value2
+read -p "Enter lastName: " value
 lastName="^[ A-Z ]{1}[a-z]{2,}$"
-if [[ $value2 =~ $lastName ]]
+if [[ $value =~ $lastName ]]
+then
+   echo "True"
+else
+   echo "False"
+fi
+#email
+read -p "Enter email: " value
+pattern="^([a-zA-Z0-9\_\.\-\+\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,}|[0-9]{1,})(\]?)$"
+if [[ $value =~ $pattern ]]
 then
    echo "True"
 else
