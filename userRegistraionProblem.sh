@@ -26,3 +26,12 @@ then
 else
    echo "False"
 fi
+#Mobile N.O
+read -p "mobile Number: " value
+mobileNumber="^[0-9]{2}[: :][0-9]{10}$"
+if [[ $value =~ $mobileNumber ]]
+then
+   echo "True"
+else
+   echo "False"
+fi
