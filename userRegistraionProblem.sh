@@ -35,3 +35,11 @@ then
 else
    echo "False"
 fi
+#Password Validation
+read -p "Enter password " password
+if [[ ${#password} -ge 8 ]]
+then
+   echo "True"
+else
+   echo "False"
+fi
