@@ -37,7 +37,7 @@ else
 fi
 #Password Validation
 read -p "Enter password " password
-if [[ ${#password} -ge 8 ]]
+if [[ ${#password} -ge 8 && "$password" == *[[:upper:]]* ]]
 then
    echo "True"
 else
