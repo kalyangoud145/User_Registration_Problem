@@ -17,9 +17,9 @@ then
 else
    echo "False"
 fi
-#email
+#email validation
 read -p "Enter email: " value
-pattern="^([a-zA-Z0-9\_\.\-\+\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,}|[0-9]{1,})(\]?)$"
+pattern="^([a-zA-Z0-9\_\-\+\-]{1}[a-zA-Z0-9\_\-\.\+\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,}|[0-9]{1,})(\]?)$"
 if [[ $value =~ $pattern ]]
 then
    echo "True"
