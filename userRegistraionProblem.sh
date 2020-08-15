@@ -43,3 +43,13 @@ then
 else
    echo "False"
 fi
+#email Id pattern for clearing Test samples 
+read value
+pattern="^([a-zA-Z0-9\_\-\+\-]{1}[a-zA-Z0-9\_\-\.\+\-]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,}|[0-9]>
+if [[ $value =~ $pattern ]]
+then
+   echo "True"
+else
+   echo "False"
+fi
+
